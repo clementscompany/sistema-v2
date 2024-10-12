@@ -1,0 +1,43 @@
+{
+  "name": "sistema-de-gestao-de-stock",
+  "productName": "Sistema de Gestao de Stock",
+  "description": "Gestao de vendas e Stock",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "moises",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "server": "nodemon ./backend/test/text.js",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.gestao.sistema",
+    "productName": "Sistema de Gestao de Stock",
+    "directories": {
+      "buildResources": "./src/img"
+    },
+    "win": {
+      "icon": "./src/img/icon.jpg"
+    },
+    "mac": {
+      "icon": "./src/img/icon.jpgs"
+    },
+    "linux": {
+      "icon": "./src/img/icon.jpg"
+    }
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "electron": "30.0.2",
+    "electron-builder": "^25.1.8",
+    "nodemon": "^3.1.7"
+  }
+}
